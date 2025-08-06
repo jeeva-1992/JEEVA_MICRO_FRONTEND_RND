@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:mfe-host": "node dist/mfe-host/server/server.mjs"
+    "serve:ssr:mfe-host": "node dist/mfe-host/server/server.mjs",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "prettier": {
     "overrides": [
@@ -21,6 +22,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-architects/module-federation": "^20.0.0",
     "@angular/common": "^20.1.0",
     "@angular/compiler": "^20.1.0",
     "@angular/core": "^20.1.0",
@@ -34,6 +36,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^20.1.4",
     "@angular/build": "^20.1.4",
     "@angular/cli": "^20.1.4",
     "@angular/compiler-cli": "^20.1.0",
@@ -46,6 +49,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ngx-build-plus": "^20.0.0",
     "typescript": "~5.8.2"
   }
 }

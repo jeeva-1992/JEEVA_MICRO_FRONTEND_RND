@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-angular-project": {
+    "mft-host": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-angular-project:build:production"
+              "buildTarget": "mft-host:build:production"
             },
             "development": {
-              "buildTarget": "my-angular-project:build:development"
+              "buildTarget": "mft-host:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,6 +90,6 @@
     }
   },
   "cli": {
-    "analytics": "35f2db8b-08ea-4223-9ef9-36b55f147eb4"
+    "analytics": "53498dd6-9cc2-4d4c-8b0b-b46162d47bdd"
   }
 }

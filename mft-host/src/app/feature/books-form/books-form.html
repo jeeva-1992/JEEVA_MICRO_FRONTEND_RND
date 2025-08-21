@@ -1,0 +1,12 @@
+<form [formGroup]="bookFormGroup" *ngIf="formData" (ngSubmit)="submit()">
+  <div>{{formData['name']}}</div>
+  <div>{{formData['author']}}</div>
+  <app-star-component formControlName="bookRating"></app-star-component>
+  <div class="errors" *ngIf="(submitted || bookFormGroup.controls['bookRating'].touched) && bookFormGroup.controls['bookRating'].invalid">
+    <small *ngIf="bookFormGroup.controls['bookRating'].errors?.['required']">Rating is required.</small>
+    <small *ngIf="bookFormGroup.controls['bookRating'].errors?.['min'] || bookFormGroup.controls['bookRating'].errors?.['max']">
+      Rating must be between 1 and 5.
+    </small>
+  </div>
+  <button type="submit">SUBMIT</button>
+</form>

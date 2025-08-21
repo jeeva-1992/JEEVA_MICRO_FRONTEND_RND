@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col">
+        <div class="row book-box" *ngFor="let book of bookList; trackBy: track" (click)="openBook(book)">
+            <div class="col">
+                <div>{{book.name}}</div>
+                <div>By {{book.author}}</div>
+            </div>
+            <div class="col">
+                <app-star-component [rating]="book.rating" [disabled]="true"></app-star-component>
+            </div>
+
+        </div>
+    </div>
+    <div class="col">
+        <app-books-form [mFormData]="currentBook"></app-books-form>
+    </div>
+</div>
+
+<div class="col">
+    AVERAGE RATING OF ALL BOOKS
+    {{averageRating}}
+</div>

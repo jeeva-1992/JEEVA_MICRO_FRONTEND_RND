@@ -1,0 +1,20 @@
+.star-rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: #FFD700;
+}
+
+.star-rating.disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+}
